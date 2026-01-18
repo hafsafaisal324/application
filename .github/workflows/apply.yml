@@ -1,0 +1,28 @@
+name: Apply to B12
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Submit application
+        env:
+          B12_NAME: "YOUR_NAME"
+          B12_EMAIL: "YOUR_EMAIL"
+          B12_RESUME_LINK: "RESUME_LINK"
+          # Optional: override if you want
+          # B12_REPOSITORY_LINK: "https://github.com/your/repo"
+        run: |
+          python submit_application.py
