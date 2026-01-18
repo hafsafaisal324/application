@@ -19,9 +19,13 @@ jobs:
 
       - name: Submit application
         env:
-          B12_NAME: "YOUR_NAME"
-          B12_EMAIL: "YOUR_EMAIL"
-          B12_RESUME_LINK: "RESUME_LINK"
+             - name: Submit application
+        env:
+            B12_NAME: "Hafsa Faisal"
+            B12_EMAIL: "hafsafaisal324@gmail.com"
+            B12_RESUME_LINK: "https://drive.google.com/file/d/1pIaWGuyicV4AX2uYBCj1mUiAC6rg3TwM/view?usp=sharing"
+ 
+
           # Optional: override if you want
           # B12_REPOSITORY_LINK: "https://github.com/your/repo"
         run: |
